@@ -169,6 +169,27 @@ body {
 .chart__drawing {
   border-radius: 5px;
   height: var(--_height);
+  cursor: pointer;
+  transition: opacity 300ms ease;
+  position: relative;
+}
+
+.chart__drawing:hover::before {
+  content: '$' attr(data-amount);
+
+  position: absolute;
+  opacity: 1;
+  top: -1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--clr-dark-brown);
+  border-radius: 0.3125rem;
+  padding: 0.5rem 0.25rem;
+  color: var(--clr-chart);
+}
+
+.chart__drawing:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 40em) {

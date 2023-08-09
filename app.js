@@ -18,7 +18,9 @@ function renderChart(data) {
       <div class="chart__col | flex">
        <div class="chart__drawing ${
          amount === max ? 'bg-cyan' : 'bg-red'
-       }" style="--_height: ${Math.round(amount * 2.8)}px;"></div>
+       }" style="--_height: ${Math.round(
+        amount * 2.8
+      )}px;" data-amount="${amount}"></div>
        <p class="chart__day">${day} </p>
       </div>`
     })
